@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Soil Analyzer</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='logo.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Soil Analyzer</span></h2>
+            <div class='description'>
+    			<p>Analyses the soil fertility with the essential nutrients present in the soil</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+            <h1>Predicted Soil Fertility Index: <var>{{ prediction }}</var></h1>
+				<!-- <img class="gif" src="{{ url_for('static', filename='diabetes.webp') }}" alt="Diabetes Image"> -->
+
+		</div>
+        <div class="scale">
+            <img src="static/GSFS scale.png">
+            
+        </div>
+
+		<!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/prakashy003/Soil-Analyzer"><i class="fab fa-github fa-lg contact-icon"></i></a>
+
+           </div>
+       </div>
+
+	</body>
+</html>

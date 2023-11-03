@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Soil Analyzer</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='logo.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Soil Analyzer</span></h2>
+            <div class='description'>
+    			<p>Analyses the soil fertility with the essential nutrients present in the soil</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="number" name="pH" placeholder="pH" step="0.01"><br>
+                <input class="form-input" type="number" name="EC" placeholder="Electrical Conductivity" step="0.01"><br>
+                <input class="form-input" type="number" name="OC" placeholder="Organic Carbon" step="0.01"><br>
+                <input class="form-input" type="number" name="N" placeholder="Nitrogen" step="0.01"><br>
+                <input class="form-input" type="number" name="P" placeholder="Phosphorus" step="0.01"><br>
+                <input class="form-input" type="number" name="K" placeholder="Potassium" step="0.01"><br>
+                <input class="form-input" type="number" name="S" placeholder="Sulphur" step="0.01"><br>
+                <input class="form-input" type="number" name="Ca" placeholder="Calcium" step="0.01"><br>
+                <input class="form-input" type="number" name="Mg" placeholder="Magnesium" step="0.01"><br>
+                <input class="form-input" type="number" name="Zn" placeholder="Zinc" step="0.01"><br>
+                <input class="form-input" type="number" name="Cu" placeholder="Copper" step="0.01"><br>
+                <input class="form-input" type="number" name="Fe" placeholder="Iron" step="0.01"><br>
+                <input class="form-input" type="number" name="Mn" placeholder="Manganese" step="0.01"><br>
+                <input class="form-input" type="number" name="B" placeholder="Boron" step="0.010"><br>
+                <input class="form-input" type="number" name="Mo" placeholder="Molybdenum" step="0.01"><br>
+                <input class="form-input" type="number" name="Tex" placeholder="Texture" step="1"><br>
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/prakashy003/Soil-Analyzer"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="contact.html"><i class="fa-solid fa-users-line fa-fade fa-2xs" style="color: #ffffff;"></i></a>
+           </div>
+       </div>
+
+    </body>
+</html>
